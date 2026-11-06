@@ -1,0 +1,31 @@
+== fake API request times (epoch): prompt at 885 retried at 900 (Claude internal), then 921 = rewake after 20s backoff; no more after
+1793965885 POST /v1/messages?beta=true
+1793965900 POST /v1/messages?beta=true
+1793965921 POST /v1/messages?beta=true
+== .claude-stopfailure
+error=rate_limit
+retryable=1
+count=2
+first_at=1793965901
+last_at=1793965921
+delay=40
+retry_at=1793965961
+notified=0
+message=API Error: Server is temporarily limiting requests (not your usage limit) · Weekly limit reached
+== pane
+ ▐▛███▛█   Claude Code v2.1.318
+▝▜██████▀  Opus 5.5 · Claude Ultra
+ ▝▝   ▝▝   ~/.cache/no-mistakes-tmp/fm-lab.bpfeTx/project
+❯ hello
+● API Error: Server is temporarily limiting requests (not your usage limit) · Weekly limit reached
+✻ Cooked for 0s · done 3:51 PM
+● Stop hook feedback
+● API Error: Server is temporarily limiting requests (not your usage limit) · Weekly limit reached
+✻ Churned for 0s · done 3:52 PM
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle)
+== lab watcher processes still cycling after both failures
+3841474      57 bash /home/djc/.cache/no-mistakes-tmp/fm-lab.bpfeTx/project/bin/fm-watch-arm.sh --take-over 3836742
+3841953      57 bash /home/djc/.cache/no-mistakes-tmp/fm-lab.bpfeTx/project/bin/fm-watch.sh
