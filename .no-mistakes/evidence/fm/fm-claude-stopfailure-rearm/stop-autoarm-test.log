@@ -58,8 +58,8 @@ ok - auto-arm: a non-retryable StopFailure records the episode, notifies once (p
 ok - auto-arm: a non-retryable StopFailure silences an earlier parked generation's rewake
 ok - auto-arm: a StopFailure hold after a failed arm starts a watcher cycle before the suppressed retry
 ok - auto-arm: a StopFailure hold starts a replacement cycle when its covering watcher ends mid-hold
-ok - auto-arm: a StopFailure hold replaces a replacement cycle that closes before the next health check
-ok - auto-arm: a StopFailure hold stops replacing after three cycles in a row that cannot start
+ok - auto-arm: a StopFailure hold re-arms on every tick that finds no live cycle, at most once per tick
+ok - auto-arm: a StopFailure hold retries an unstartable watcher once per tick, without a tight loop
 ok - auto-arm: the first failure notice of a StopFailure episode is delivered promptly when no watcher can be started
 ok - auto-arm: a failed parent-channel notice is retried in the firing and handed back to the episode
 ok - auto-arm: zero-padded StopFailure backoff knobs are read as decimal
@@ -81,7 +81,3 @@ ok - auto-arm: a host that died without a close is retried, then reported as a f
 ok - auto-arm: --help, -h, and an unknown argument arm nothing; the Stop path still arms
 ok - fm-lock: shared session-lock lib preserves the status path
 ok - auto-arm: stands down only on a pi-code-delivered transcript_path (/.pi/)
-
-real	1m51.721s
-user	0m16.309s
-sys	0m20.560s

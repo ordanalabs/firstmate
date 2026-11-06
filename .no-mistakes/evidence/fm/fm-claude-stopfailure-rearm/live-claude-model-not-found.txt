@@ -1,0 +1,32 @@
+== pane
+⚠ Model "claude-nonexistent-9" isn't recognized · context assumed to be 200k tokens · update Claude Code, or see the docs
+❯ hello
+● There's an issue with the selected model (claude-nonexistent-9). It may not exist or you may not have access to it. Run /model to pick a different model.
+✻ Worked for 0s · done 12:58 PM
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle)
+== .claude-stopfailure
+error=model_not_found
+retryable=0
+count=1
+first_at=1793955503
+last_at=1793955503
+delay=1800
+retry_at=1793957303
+notified=1
+message=There's an issue with the selected model (claude-nonexistent-9). It may not exist or you may not have access to it. Run /model to pick a different model.
+== .wake-queue
+1793955503	1	check	claude-stopfailure:1793955503	check: Claude API error model_not_found ended the primary turn; retrying cannot fix it, so automatic supervision stays paused until the credential or configuration is fixed (state/.claude-stopfailure)
+== after second failure
+error=model_not_found
+retryable=0
+count=2
+first_at=1793955503
+last_at=1793955547
+delay=1800
+retry_at=1793957347
+notified=1
+message=There's an issue with the selected model (claude-nonexistent-9). It may not exist or you may not have access to it. Run /model to pick a different model.
+1 /home/djc/.cache/no-mistakes-tmp/fm-lab.ZbMkWm/project/state/.wake-queue
