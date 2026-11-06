@@ -1,0 +1,3 @@
+test_stopfailure_hold_replaces_a_stalled_watcher_whose_arm_stays_alive, run alone from an archive of HEAD in a temp dir
+previous hook (HEAD~1): not ok - stalled-watcher hold scenario did not complete (90: no first cover, 91: the stalled watcher was never replaced): expected exit 0, got 91
+current hook (HEAD):    ok - auto-arm: a StopFailure hold replaces a stalled watcher whose arm stays alive once the arm's startup window ends
